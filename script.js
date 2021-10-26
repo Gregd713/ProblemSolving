@@ -35,6 +35,7 @@ console.log(b2)
 const str1 ='aaaaccccbbdddd'
 const str2 ='hhhjjjjkkkkklllll'
 const str3 ='mmmmmnnnnnnfffff'
+
 const compressString=(str='')=>{
     let res ='';
     let count =1;
@@ -52,3 +53,21 @@ const compressString=(str='')=>{
 console.log(compressString(str1));
 console.log(compressString(str2));
 console.log(compressString(str3));
+
+//Determining if a word is a palindrome
+function check_palindrome( str )
+{
+  let j = str.length -1;
+  for( let i = 0 ; i < j/2 ;i++)
+  {
+    let x = str[i] ;//forward character
+    let y = str[j-i];//backward character
+    if( x != y)
+    {
+      return false;
+    }
+  }
+  return true;
+}
+let x= "madam"
+console.log(check_palindrome(x));
